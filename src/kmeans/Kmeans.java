@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Cesar Astudilo, 2015.
+ * http://www.cesarastudillo.cl 
+ * feel free to use, copy or reproduce.
+ * just bring me some credit if you find this code useful.
  */
 package kmeans;
 
@@ -35,7 +36,7 @@ public class Kmeans {
     }
     
     /**
-     * 
+     * the k-means algorithm for data clustering.
      * @param X dataset.
      * @param k number of clusters
      */
@@ -61,6 +62,10 @@ public class Kmeans {
         return mean+r.nextGaussian()*sigma;
     }
     
+    /**
+     * The learning algorithm.
+     * @return a vector containing the assigned cluster for each instance.
+     */
     public double[] buildClusters(){
         initializeWeights();// intial random weights
         int T=100;//TODO: the total number of iterations. this should be a parameter.
@@ -101,7 +106,9 @@ public class Kmeans {
     }
     
 
-
+/**
+ * The purpose of this method is just clean the learning algorithm
+ */
     private void resetCounters() {
         for (int i = 0; i < k; i++) {
             for (int j = 0; j < d; j++) {
@@ -115,7 +122,7 @@ public class Kmeans {
      * 
      * @param j the index of the instance being scrutinized
      *
-     * @return the index of the closest cluster 
+     * @return the index of the closest weight vector to the given instance. 
      */
     private int getIndexOfTheClosestCluster(int j) {
                 double distance;

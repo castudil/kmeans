@@ -6,7 +6,7 @@
 package kmeans;
 
 /**
- *
+ * main class for running the k means example
  * @author castudil
  */
 public class KmeansApp {
