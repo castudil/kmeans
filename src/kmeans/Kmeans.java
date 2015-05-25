@@ -92,9 +92,9 @@ public class Kmeans {
      * Initialize the weight by Randomly selecting elements from the dataset.
      */
     protected void initializeWeights(){
-        assert (k==2);
-        assert (d==2);
-        assert n==20;
+        //assert (k==2);
+        //assert (d==2);
+        //assert n==20;
         int l;
         for (int i = 0; i < k; i++) {
            //randomly select an instance from the dataset
